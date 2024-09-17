@@ -13,7 +13,7 @@
 								margin: 0;
 								text-decoration: none;
 								list-style: none;
-					                        font-family: sans-serif;
+					 font-family: sans-serif;
 				}
 				
 				body{
@@ -77,7 +77,7 @@
 												Welcome to my game!
 								</h1>
 								<p class="parag">
-												Click the submit button to proceed to 1st phase.
+												Click the next button to proceed to 1st phase.
 								</p>
 								<input type="text" class="input">
 								<button type="button" class="btn">Next</button>
@@ -90,6 +90,8 @@
    const button = document.querySelector('.btn');
 				let i = 0;
 				let z;
+				let y;
+				let x;
 
    button.addEventListener('click', () => {
    const uinput = input.value;
@@ -113,11 +115,11 @@
    } else if (i == 4){
    		 i = 5;
      head.textContent = "Last Phase";
-     par.textContent = "Tell me 3 out of the 4 digits in the difference you got and I'll guess the number you didn't say.";
+     par.textContent = "Hide a digit in the difference you got and I'll guess the number you hid. (ex: instead of 1224, you have to say 241)";
    } else if (i == 5){
    				i = 6;
    				head.textContent = "Where magic happens.";
-   				par.texContent = "Enter the 3 digits. (0 cannot be hidden)";
+   				par.textContent = "Enter the the numbers on ur mind in any order. (0 cannot be hidden)";
    				input.style.visibility = "visible";
    				button.textContent = "Submit";
    } else if (i == 6){
